@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import ConnectDb from "./config/mongodb.js";
-import { clerkWebhooks } from "./controllers/webhooks.js";
+import { clerkwebhooks } from "./controllers/webhooks.js";
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.send("API Working");
 });
 
-app.post("/clerk", clerkWebhooks);
+app.post("/clerk", clerkwebhooks);
 
 // ❌ app.listen(...) mat karo
 
