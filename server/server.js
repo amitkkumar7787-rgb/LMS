@@ -8,7 +8,12 @@ dotenv.config();
 
 const app = express();
 
-await ConnectDb();
+try {
+  await ConnectDb();
+  console.log("Database Connected Successfully");
+} catch (err) {
+  console.error("Database Connection Failed:", err);
+}
 
 app.use(cors());
 app.use(express.json());
@@ -18,7 +23,5 @@ app.get("/", (req, res) => {
 });
 
 app.post("/clerk", clerkwebhooks);
-
-// ❌ app.listen(...) mat karo
 
 export default app;
