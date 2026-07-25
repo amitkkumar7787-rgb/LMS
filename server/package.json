@@ -10,7 +10,7 @@
     "start" : "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "", 
   "license": "ISC",
   "dependencies": {
     "@clerk/express": "^2.1.45",
